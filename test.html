@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test INVALSI di Italiano</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+    <div id="termina-finestra">
+        <h1>ATTENZIONE <br> 
+            Una volta terminato il test non potrai più modificare il test</h1>
+        <div id="buttons">
+            <button id="terminaSi" onclick="terminaSi()">TERMINA PROVA</button>
+            <button id="terminaNo" onclick="terminaNo()">TORNA ALLA PROVA</button>
+        </div>
+    </div>
+
+    <div id="warningFinestra">
+        <h1 id="avviso">Se uscirai dalla pagina non potrai più rientrare in questo test.</h1>
+        <div id="buttons">
+            <button id="buttonExit" onclick="exit()">ESCI</button>
+            <button id="buttonNoExit" onclick="stay()">TORNA AL TEST</button>
+        </div>
+    </div>
+
+    <div id="loader-container">
+        <div id="loader"></div>
+    </div>
+
+    
+        <div class="up-bar">
+            <img id="img-up" onclick="warning()" src="invalsi.png" title="Piattaforma Invalsi" width="50px">
+            <div class="dark-light">
+                <img id="sun" onclick="chiara()" src="sun.png" width="10px" height="10px" title="Attiva la modalità chiara">
+                <img id="moon" onclick="scura()" src="moon.png" width="10px" height="10px" title="Attiva la modalità scura">
+            </div>
+            <span id="timer"></span>
+             
+        </div>
+
+        
+        <div class="up-sections">
+            <div id="prima-parte">
+                <h3>PARTE PRIMA</h3>
+            </div>
+            <div id="seconda-parte">
+                <h3>PARTE SECONDA</h3>
+            </div>
+            <div id="terza-parte">
+                <h3>PARTE TERZA</h3>
+            </div>
+            <div id="termina" onclick="terminaprova()">
+                <span>TERMINA PROVA</span>
+                <img src="finish.png" width="25px" title="Termina prova">
+            </div>
+        </div>
+
+    <div id="container-all">
+        <div id="first-s">
+            <div class="testo">
+                <h1 class="titolo-testo" style="font-size: 36px;" >Il Mistero della Biblioteca Perduta</h1>
+                <p>Luca amava passare i pomeriggi nella biblioteca del suo quartiere. Tra gli scaffali colmi di libri, trovava sempre nuove avventure da leggere. Un giorno, mentre sfogliava un vecchio volume impolverato, scoprì una pagina strappata con una scritta a matita: <i>"Cerca dietro la statua del gufo"</i>.  
+                    Curioso, si avvicinò alla grande statua di pietra posta al centro della sala e notò una piccola fessura alla base. Infilando la mano, trovò un foglietto ingiallito. Era una mappa! Mostrava una parte della biblioteca che non aveva mai visto prima. Guardandosi intorno per assicurarsi che nessuno lo stesse osservando, Luca si mise in cammino, il cuore che gli batteva forte per l’emozione e la paura.</p>  
+                    
+                    <p>Seguì le indicazioni della mappa con attenzione, contando i passi come indicato. Ogni tanto si fermava per controllare se qualcuno lo stesse seguendo, ma la biblioteca era immersa in un silenzio quasi irreale. Giunto di fronte a una vecchia libreria di legno scuro, notò che un libro sembrava fuori posto. Lo osservò per un attimo, poi lo spinse delicatamente. Con un lieve scricchiolio, la libreria si spostò lentamente, rivelando un passaggio segreto.  
+                    Luca esitò. Era davvero pronto a scoprire cosa si nascondesse oltre quella soglia? Si fece coraggio e varcò l’ingresso.</p>  
+                    
+                    <p>L'aria all'interno era densa di polvere e odore di carta antica. Una debole luce filtrava da una piccola finestra in alto, illuminando scaffali colmi di libri rilegati in pelle e pergamene ingiallite dal tempo. Alcuni volumi erano così vecchi che le loro pagine sembravano sul punto di sgretolarsi al minimo tocco.  
+                    Tra gli scaffali, trovò un diario con il nome del primo bibliotecario della città. Le pagine erano fitte di scrittura elegante, quasi dimenticata, e raccontavano di un’epoca lontana in cui la biblioteca custodiva conoscenze proibite. Luca scoprì che quella stanza segreta era stata creata per proteggere libri rari e documenti che, in passato, erano stati considerati troppo pericolosi per essere divulgati.  
+                    Si domandò perché nessuno ne parlasse più. Era possibile che quel segreto fosse stato intenzionalmente nascosto?</p>  
+                    
+                    <p>Continuando la sua esplorazione, notò un vecchio baule coperto di polvere nell'angolo della stanza. Lo aprì con cautela e rimase senza fiato. All'interno c'erano manoscritti sigillati con ceralacca e un piccolo cofanetto di legno intagliato. Con mani tremanti, lo aprì e trovò all'interno una chiave d'argento e un biglietto con una scritta ormai sbiadita: <i>"Il sapere appartiene a chi ha il coraggio di cercarlo."</i>  
+                    Cosa apriva quella chiave? E perché qualcuno l'aveva nascosta così bene? La mente di Luca si riempì di domande.</p>  
+                    
+                    <p>Emozionato, corse a raccontare tutto alla bibliotecaria, che lo guardò con un sorriso enigmatico: <i>"Hai trovato ciò che nessuno cercava più. Ora sta a te decidere cosa farne."</i>  
+                    Luca rimase in silenzio per un momento, poi sollevò lo sguardo. Sapeva che quel segreto non poteva restare nascosto per sempre. Con un respiro profondo, decise che avrebbe fatto di tutto per riportare alla luce quella straordinaria collezione. Ma prima, doveva scoprire cosa aprisse quella misteriosa chiave…</p>                    
+            </div>
+
+            <div class="tutte-risposte">
+                <div class="risposte-container">
+                    <div class="risposte">
+                        <div class="radio-container">      
+                            <p>Perché Luca controlla se qualcuno lo sta osservando mentre segue la mappa?</p>                   
+                            <input type="radio" id="prima-parte-uno" name="domanda1">
+                            <label for="prima-parte-uno">Ha paura di perdersi nella biblioteca.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-due" name="domanda1">
+                            <label for="prima-parte-due">La mappa gli dice di fare attenzione ai guardiani.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-tre" name="domanda1" data-correct="true">
+                            <label for="prima-parte-tre">È emozionato e teme che qualcuno possa fermarlo.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-quattro" name="domanda1">
+                            <label for="prima-parte-quattro">La bibliotecaria gli ha detto di non toccare nulla.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-cinque" name="domanda1">
+                            <label for="prima-parte-cinque">Vuole assicurarsi che nessuno prenda la mappa.</label>
+                        </div>
+                    </div>  
+                </div>
+                <div class="risposte-container">
+                    <div class="risposte">
+                        <div class="radio-container">
+                            <p>Quali sensazioni prova Luca quando scopre il passaggio segreto?</p>
+                            <input type="radio" id="prima-parte-uno" name="domanda2">
+                            <label for="prima-parte-uno">Rabbia e delusione perché il passaggio è bloccato.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-due" name="domanda2">
+                            <label for="prima-parte-due">Indifferenza, perché si aspettava di trovarlo.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-tre" name="domanda2" data-correct="true">
+                            <label for="prima-parte-tre">Paura ed esitazione, ma anche grande curiosità.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-quattro" name="domanda2">
+                            <label for="prima-parte-quattro">Noia, perché pensa che sia solo un ripostiglio.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-cinque" name="domanda2">
+                            <label for="prima-parte-cinque">Sollievo, perché finalmente può tornare a casa.</label>
+                        </div>
+                    </div>  
+                </div>
+                <div class="risposte-container">
+                    <div class="risposte">
+                        <div class="radio-container">
+                            <p>Come viene descritta l’aria all’interno della stanza segreta? Cosa suggerisce questa descrizione?</p>
+                            <input type="radio" id="prima-parte-uno" name="domanda3">
+                            <label for="prima-parte-uno">È fresca e pulita, suggerendo che qualcuno la usi regolarmente.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-due" name="domanda3" data-correct="true">
+                            <label for="prima-parte-due">È densa di polvere e odore di carta antica, segno che il luogo è dimenticato.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-tre" name="domanda3">
+                            <label for="prima-parte-tre">È umida e piena di muffa, indicando che i libri sono rovinati.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-quattro" name="domanda3">
+                            <label for="prima-parte-quattro">È gelida e spaventosa, suggerendo una presenza misteriosa.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-cinque" name="domanda3">
+                            <label for="prima-parte-cinque">È calda e accogliente, come una normale stanza della biblioteca.</label>
+                        </div>
+                    </div>  
+                </div>
+                <div class="risposte-container">
+                    <div class="risposte">
+                        <div class="radio-container">
+                            <p>Qual è lo scopo originale della stanza segreta secondo il diario del bibliotecario?</p>
+                            <input type="radio" id="prima-parte-uno" name="domanda4"data-correct="true">
+                            <label for="prima-parte-uno">Conservare documenti e testi considerati pericolosi.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-due" name="domanda4">
+                            <label for="prima-parte-due">Nascondere tesori d’oro e gioielli appartenuti alla città.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-tre" name="domanda4">
+                            <label for="prima-parte-tre">Servire da rifugio per gli studiosi durante le guerre.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-quattro" name="domanda4">
+                            <label for="prima-parte-quattro">Offrire un passaggio segreto per uscire dalla biblioteca.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-cinque" name="domanda4">
+                            <label for="prima-parte-cinque">Proteggere un’antica maledizione legata ai libri.</label>
+                        </div>
+                    </div>  
+                </div>
+                <div class="risposte-container">
+                    <div class="risposte">
+                        <div class="radio-container">
+                            <p>Perché alcuni libri erano stati considerati troppo pericolosi per essere divulgati?</p>
+                            <input type="radio" id="prima-parte-uno" name="domanda5">
+                            <label for="prima-parte-uno">Contenevano formule magiche pericolose.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-due" name="domanda5" data-correct="true">
+                            <label for="prima-parte-due">Erano testi segreti che potevano cambiare il potere politico.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-tre" name="domanda5">
+                            <label for="prima-parte-tre">Erano pieni di errori e teorie sbagliate.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-quattro" name="domanda5">
+                            <label for="prima-parte-quattro">Raccontavano storie spaventose che potevano influenzare i lettori.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-cinque" name="domanda5">
+                            <label for="prima-parte-cinque">Nessuno sapeva leggere la lingua in cui erano scritti.</label>
+                        </div>
+                    </div>  
+                </div>
+                <div class="risposte-container">
+                    <div class="risposte">
+                        <div class="radio-container">
+                            <p>Cosa potrebbe simboleggiare la chiave trovata nel baule?</p>
+                            <input type="radio" id="prima-parte-uno" name="domanda6">
+                            <label for="prima-parte-uno">Un semplice oggetto antico senza valore.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-due" name="domanda6">
+                            <label for="prima-parte-due">Il potere di Luca di aprire tutte le porte della biblioteca.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-tre" name="domanda6" data-correct="true">
+                            <label for="prima-parte-tre">L’accesso a una conoscenza nascosta e dimenticata.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-quattro" name="domanda6">
+                            <label for="prima-parte-quattro">Un segno che deve lasciare la biblioteca immediatamente.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-cinque" name="domanda6">
+                            <label for="prima-parte-cinque">Un ricordo del bibliotecario per chiunque la trovi.</label>
+                        </div>
+                    </div>  
+                </div>
+                <div class="risposte-container">
+                    <div class="risposte">
+                        <div class="radio-container">
+                            <p>Come cambia l’atteggiamento di Luca nel corso della storia?</p>
+                            <input type="radio" id="prima-parte-uno" name="domanda7">
+                            <label for="prima-parte-uno">Da annoiato a spaventato, poi decide di abbandonare la ricerca.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-due" name="domanda7" data-correct="true">
+                            <label for="prima-parte-due">Da esitante a determinato, scegliendo di portare alla luce il segreto.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-tre" name="domanda7">
+                            <label for="prima-parte-tre">Da sicuro di sé a confuso, senza sapere cosa fare.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-quattro" name="domanda7">
+                            <label for="prima-parte-quattro">Da felice a triste, perché non trova nulla di interessante.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-cinque" name="domanda7">
+                            <label for="prima-parte-cinque">Da curioso a disinteressato, perché la scoperta non è importante.</label>
+                        </div>
+                    </div>  
+                </div>
+                <div class="risposte-container">
+                    <div class="risposte">
+                        <div class="radio-container">
+                            <p>Quale significato potrebbe avere la frase: "Il sapere appartiene a chi ha il coraggio di cercarlo"?</p>
+                            <input type="radio" id="prima-parte-uno" name="domanda8">
+                            <label for="prima-parte-uno">Solo chi legge velocemente può ottenere conoscenza.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-due" name="domanda8">
+                            <label for="prima-parte-due"> La conoscenza è pericolosa e non dovrebbe essere condivisa.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-tre" name="domanda8" data-correct="true">
+                            <label for="prima-parte-tre">Chi è curioso e determinato può scoprire cose preziose.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-quattro" name="domanda8">
+                            <label for="prima-parte-quattro">Solo i ricchi possono permettersi di studiare.</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="prima-parte-cinque" name="domanda8">
+                            <label for="prima-parte-cinque">Il sapere è inutile se non viene conservato segretamente.</label>
+                        </div>
+                    </div>  
+                </div>
+            </div>       
+        </div>
+     </div>   
+
+    <div id="container-all-due">
+        <div class="parte-ortografia">
+            <h1 style="color: red;">SEZIONE ORTOGRAFIA</h1>
+            <div class="opzioni">
+                <div class="radio-container">
+                    <p>Quale tra le seguenti parole è scritta correttamente</p>
+                    <input type="radio" id="prima-parte-uno" name="domanda9">
+                    <label for="prima-parte-uno">Accellerare</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" id="prima-parte-due" name="domanda9" data-correct="true">
+                    <label for="prima-parte-due">Accedere</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" id="prima-parte-tre" name="domanda9">
+                    <label for="prima-parte-tre">Avvolggente</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" id="prima-parte-quattro" name="domanda9">
+                    <label for="prima-parte-quattro">Avvizzire</label>
+                </div>
+            </div>
+            <div class="opzioni">
+                <div class="radio-container">
+                    <p>Individua l’errore ortografico nella frase:
+                        "L'atmosfera era avvolgente e rilassante."</p>
+                    <input type="radio" id="prima-parte-uno" name="domanda10">
+                    <label for="prima-parte-uno">atmosfera</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" id="prima-parte-due" name="domanda10">
+                    <label for="prima-parte-due">rilassante</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" id="prima-parte-tre" name="domanda10">
+                    <label for="prima-parte-tre">avvolgente</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" id="prima-parte-quattro" name="domanda10" data-correct="true">
+                    <label for="prima-parte-quattro">nessun errore</label>
+                </div>
+            </div>
+            <div class="opzioni">
+                <div class="radio-container">
+                    <p>Quale parola presenta un errore di scrittura?</p>
+                    <input type="radio" id="prima-parte-uno" name="domanda11">
+                    <label for="prima-parte-uno">Necessario</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" id="prima-parte-due" name="domanda11">
+                    <label for="prima-parte-due">Conoscenza</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" id="prima-parte-tre" name="domanda11" data-correct="true">
+                    <label for="prima-parte-tre">Conoscienza</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" id="prima-parte-quattro" name="domanda11">
+                    <label for="prima-parte-quattro">Accelerare</label>
+                </div>
+            </div>
+            <div class="opzioni">
+                <div class="radio-container">
+                    <p>Qual è la forma corretta?</p>
+                    <input type="radio" id="prima-parte-uno" name="domanda12">
+                    <label for="prima-parte-uno">Qual'è il tuo nome?</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" id="prima-parte-due" name="domanda12">
+                    <label for="prima-parte-due">Qual é il tuo nome?</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" id="prima-parte-tre" name="domanda12" data-correct="true">
+                    <label for="prima-parte-tre">Qual è il tuo nome?</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" id="prima-parte-quattro" name="domanda12">
+                    <label for="prima-parte-quattro">Quale' il tuo nome?</label>
+                </div>
+            </div>
+            <div class="opzioni">
+                <div class="radio-container">
+                    <p>Scegli la frase senza errori:</p>
+                    <input type="radio" id="prima-parte-uno" name="domanda13" data-correct="true">
+                    <label for="prima-parte-uno">Domani andremo a casa di Mario.</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" id="prima-parte-due" name="domanda13">
+                    <label for="prima-parte-due">Domani andremmo a casa di Mario.</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" id="prima-parte-tre" name="domanda13">
+                    <label for="prima-parte-tre">Domani anderemo a casa di Mario.</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" id="prima-parte-quattro" name="domanda13">
+                    <label for="prima-parte-quattro">Domani anno andato a casa di Mario.</label>
+                </div>
+            </div>
+
+            <div class="parte-ortografia">
+                <h1 style="color: red;">SEZIONE MORFOLOGIA</h1>
+                <div class="opzioni">
+                    <div class="radio-container">
+                        <p>Quale tra le seguenti parole è un verbo?</p>
+                        <input type="radio" id="prima-parte-uno" name="domanda14">
+                        <label for="prima-parte-uno">Felicità</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-due" name="domanda14" data-correct="true">
+                        <label for="prima-parte-due">Correre</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-tre" name="domanda14">
+                        <label for="prima-parte-tre">Tavolo</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-quattro" name="domanda14">
+                        <label for="prima-parte-quattro">Allegria</label>
+                    </div>
+                </div>
+                <div class="opzioni">
+                    <div class="radio-container">
+                        <p>Qual è il tempo verbale della seguente frase?
+                            "Se avessi studiato di più, avresti superato l'esame."</p>
+                        <input type="radio" id="prima-parte-uno" name="domanda15" data-correct="true">
+                        <label for="prima-parte-uno">Congiuntivo imperfetto e condizionale passato</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-due" name="domanda15">
+                        <label for="prima-parte-due">Indicativo passato prossimo e condizionale presente</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-tre" name="domanda15">
+                        <label for="prima-parte-tre">Congiuntivo trapassato e condizionale passato</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-quattro" name="domanda15">
+                        <label for="prima-parte-quattro">Indicativo imperfetto e condizionale presente</label>
+                    </div>
+                </div>
+                <div class="opzioni">
+                    <div class="radio-container">
+                        <p>Indica la funzione della parola "che" nella frase:
+                            "Il libro che ho letto è interessante."</p>
+                        <input type="radio" id="prima-parte-uno" name="domanda16" data-correct="true">
+                        <label for="prima-parte-uno">Pronome relativo</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-due" name="domanda16">
+                        <label for="prima-parte-due">Congiunzione</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-tre" name="domanda16">
+                        <label for="prima-parte-tre">Aggettivo dimostrativo</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-quattro" name="domanda16">
+                        <label for="prima-parte-quattro">Pronome personale</label>
+                    </div>
+                </div>
+                <div class="opzioni">
+                    <div class="radio-container">
+                        <p>Quale delle seguenti parole è un aggettivo qualificativo?</p>
+                        <input type="radio" id="prima-parte-uno" name="domanda17">
+                        <label for="prima-parte-uno">Bellezza</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-due" name="domanda17">
+                        <label for="prima-parte-due">Correre</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-tre" name="domanda17">
+                        <label for="prima-parte-tre">Sole</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-quattro" name="domanda17" data-correct="true">
+                        <label for="prima-parte-quattro">Luminoso</label>
+                    </div>
+                </div>
+                <div class="opzioni">
+                    <div class="radio-container">
+                        <p>Qual è la forma corretta del participio passato del verbo "cuocere"?</p>
+                        <input type="radio" id="prima-parte-uno" name="domanda18">
+                        <label for="prima-parte-uno">Cuocito</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-due" name="domanda18" data-correct="true">
+                        <label for="prima-parte-due">Cotto</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-tre" name="domanda18">
+                        <label for="prima-parte-tre">Cuocuto</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-quattro" name="domanda18">
+                        <label for="prima-parte-quattro">Cuocendo</label>
+                    </div>
+                </div>
+            </div>
+            <div class="parte-ortografia">
+                <h1 style="color: red;">SEZIONE LESSICALE</h1>
+                <div class="opzioni">
+                    <div class="radio-container">
+                        <p>Qual è il sinonimo corretto della parola “timido” nel contesto:
+                            "Marco è un ragazzo timido e riservato."</p>
+                        <input type="radio" id="prima-parte-uno" name="domanda19" data-correct="true">
+                        <label for="prima-parte-uno">Esitante</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-due" name="domanda19">
+                        <label for="prima-parte-due">Sicuro</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-tre" name="domanda19">
+                        <label for="prima-parte-tre">Coraggioso</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-quattro" name="domanda19">
+                        <label for="prima-parte-quattro">Sfacciato</label>
+                    </div>
+                </div>
+                <div class="opzioni">
+                    <div class="radio-container">
+                        <p>Quale parola può sostituire "sconsiderato" nella frase:
+                            "Il suo comportamento è stato sconsiderato."</p>
+                        <input type="radio" id="prima-parte-uno" name="domanda20">
+                        <label for="prima-parte-uno">Prudente</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-due" name="domanda20" data-correct="true">
+                        <label for="prima-parte-due">Imprudente</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-tre" name="domanda20">
+                        <label for="prima-parte-tre">Attento</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-quattro" name="domanda20">
+                        <label for="prima-parte-quattro">Rispettoso</label>
+                    </div>
+                </div>
+                <div class="opzioni">
+                    <div class="radio-container">
+                        <p>Qual è l’opposto della parola "effimero"?"</p>
+                        <input type="radio" id="prima-parte-uno" name="domanda21" data-correct="true">
+                        <label for="prima-parte-uno">Duraturo</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-due" name="domanda21">
+                        <label for="prima-parte-due">Momentaneo</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-tre" name="domanda21">
+                        <label for="prima-parte-tre">Passeggero</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-quattro" name="domanda21">
+                        <label for="prima-parte-quattro">Fragile</label>
+                    </div>
+                </div>
+                <div class="opzioni">
+                    <div class="radio-container">
+                        <p>Qual è il significato della parola "eloquente" nella frase:
+                            "Il suo discorso è stato eloquente e chiaro."</p>
+                        <input type="radio" id="prima-parte-uno" name="domanda22">
+                        <label for="prima-parte-uno">Poco chiaro</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-due" name="domanda22" data-correct="true">
+                        <label for="prima-parte-due">Persuasivo</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-tre" name="domanda22">
+                        <label for="prima-parte-tre">Noioso</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-quattro" name="domanda22">
+                        <label for="prima-parte-quattro">Indecifrabile</label>
+                    </div>
+                </div>
+                <div class="opzioni">
+                    <div class="radio-container">
+                        <p>Qual è il termine corretto per indicare una persona che ama leggere?</p>
+                        <input type="radio" id="prima-parte-uno" name="domanda23">
+                        <label for="prima-parte-uno">Bibliotecario</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-due" name="domanda23" data-correct="true">
+                        <label for="prima-parte-due">Bibliofilo</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-tre" name="domanda23">
+                        <label for="prima-parte-tre">Tipografo</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="prima-parte-quattro" name="domanda23">
+                        <label for="prima-parte-quattro">Editore</label>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+    <div id="container-total-tre">
+        <div class="istruzioni">
+            <h1>Consegna</h1>
+            <p>Crea un testo argomentativo di massimo 190 caratteri su uno dei seguenti temi:</p>
+            <ul>
+                <li>L'importanza della lettura nella vita quotidiana.</li>
+                <li>I vantaggi della tecnologia nell'educazione.</li>
+                <li>Il ruolo della musica nella nostra emozionalità.</li>
+            </ul>
+            <p>Esprimi la tua opinione in modo chiaro e conciso.</p>
+        </div>
+
+        <div class="textarea">
+            <p>Parole: <span id="word-count">0</span>/190</p>
+            <textarea></textarea>
+        </div>
+            
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

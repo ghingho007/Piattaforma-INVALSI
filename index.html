@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piattaforma Invalsi</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="up-bar">
+        <a href="index.html">
+            <img src="invalsi.png" title="Piattaforma Invalsi" width="50px">
+        </a>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <a href="index.html">
+                <h1>Accesso Test INVALSI</h1>
+            </a>
+        </div>
+        <div class="main">
+            <div class="input-container">
+                <input id="username-input" type="text" required placeholder="Username">
+                <img onclick="username()" class="question-username" src="question.png" title="Non conosci il tuo username?" width="20px">
+            </div>
+            <div class="input-container">
+                <input id="codicescuola-input" type="text" required placeholder="Codice Scuola (solo numeri)" maxlength="10">
+            </div>
+            <button id="accedi" onclick="accedi()">ACCEDI</button>
+            <p id="accesso-errore"></p>
+        </div>
+
+        <div class="under-text">
+            <p class="under-p">INVALSI è una piattaforma utile, pensata per valutare le competenze degli studenti. Permette di analizzare dati e risultati. <br> 
+                Le prove aiutano a comprendere il livello di apprendimento, fornendo strumenti di miglioramento. <br> 
+                Ogni test segue criteri oggettivi e standardizzati. INVALSI è fondamentale per il monitoraggio scolastico. <br> 
+                Docenti e istituzioni utilizzano i report per sviluppare strategie educative efficaci, <br> 
+                migliorando la qualità dell’insegnamento e garantendo equità.</p>
+        </div>
+    </div>
+
+    <div id="username-help">
+        <button id="close-username" title="Chiudi finestra" onclick="closeuser()">✖</button>
+        <h1>Username Studenti <br> Liceo Siciliani-De Nobili:</h1>
+        <div id="username-text">
+            <p id="mostra-p">*************</p>
+        </div>
+        <button id="mostra-button" onclick="rivela()">RIVELA USERNAME</button>
+    </div>
+
+    <div id="loader-container">
+        <div id="loader"></div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
