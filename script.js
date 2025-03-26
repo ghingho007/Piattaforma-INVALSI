@@ -317,6 +317,9 @@ function terminaNo() {
     totalPrima.style.filter = "none";
     totalSeconda.style.filter = "none";
     totalTerza.style.filter = "none";
+    primaParte.style.display = "flex";
+    secondaParte.style.display = "flex";
+    terzaParte.style.display = "flex";
 }
 
 function terminaprova() {
