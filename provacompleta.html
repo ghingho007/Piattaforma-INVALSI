@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVALSI</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+    <div class="up-bar">
+        <img src="invalsi.png" title="Piattaforma Invalsi" width="50px">
+    </div>
+
+    <div class="container">
+        <h1>Prova completata</h1>
+
+        <div class="results">
+            <p id="risultati-esatti"></p>
+            <p id="risultati-sbagliati"></p>
+        </div>
+
+        
+
+        <a href="index.html">
+           <button>HOME</button> 
+        </a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.location.pathname.endsWith("provacompleta.html")) {
+                const esatti = document.getElementById("risultati-esatti");
+                const sbagliati = document.getElementById("risultati-sbagliati");
+                const risultatoTesto = document.getElementById("risultato-testo");
+                let risultatiRecuperati = localStorage.getItem("risposte-esatte");
+                let vereSbagliate = 23 - risultatiRecuperati;
+                esatti.style.color = "green";
+                sbagliati.style.color = "red";
+
+                esatti.innerText = "Hai totalizzato un totale di " + risultatiRecuperati + " risposte esatte";
+                sbagliati.innerText = "Le risposte errate sono " + vereSbagliate;
+            }
+        }); 
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVALSI</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+<div id="contain-all">
+
+    <div class="up-bar">
+        <a href="index.html">
+            <img src="invalsi.png" title="Piattaforma Invalsi" width="50px">
+        </a>
+    </div>
+
+    <div class="container">
+         <h1 class="title">Test di Italiano</h1>
+            <div class="box-inizia">
+                <h3>Clicca la freccia <br> per  iniziare il test</h3>
+                <img src="play.png" onclick="inizia()" title="Inizia il test">
+            </div>
+            <p id="user-candidato"></p>
+            <p id="cod-candidato"></p>
+         </div>
+    </div>
+
+    <div id="loader-container">
+        <div id="loader"></div>
+    </div>
+
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
