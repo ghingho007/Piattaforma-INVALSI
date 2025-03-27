@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function startTimer() {
-    let totalSeconds = 15 * 60; 
+    let totalSeconds = 10 * 60; 
     const timerDisplay = document.getElementById("timer"); 
 
     function updateTimer() {
