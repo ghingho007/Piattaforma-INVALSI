@@ -166,6 +166,8 @@ const termina = document.getElementById("termina");
 
 const terminaFinestra = document.getElementById("termina-finestra");
 
+const imgUp = document.getElementById("img-up");
+
 
 function warning() {
 
@@ -183,7 +185,6 @@ function exit() {
     const loader2 = document.getElementById("loader-container");
     const bodyTest = document.getElementById("container-all");
     const upBar = document.querySelector("up-bar");
-    const imgUp = document.getElementById("img-up");
 
     warningWind.style.display ="none";
     bodyTest.style.filter = "blur(4px)";
@@ -320,6 +321,7 @@ function terminaNo() {
     primaParte.style.display = "flex";
     secondaParte.style.display = "flex";
     terzaParte.style.display = "flex";
+    imgUp.style.visibility = "visible";
 }
 
 function terminaprova() {
@@ -331,6 +333,7 @@ function terminaprova() {
     primaParte.style.display = "none";
     secondaParte.style.display = "none";
     terzaParte.style.display = "none";
+    imgUp.style.visibility = "hidden";
 
     checkAnswers()
 
