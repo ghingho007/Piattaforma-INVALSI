@@ -247,17 +247,27 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function startTimer() {
-    let totalSeconds = 60 * 60; 
-
+    let totalSeconds = 15 * 60; 
     const timerDisplay = document.getElementById("timer"); 
 
     function updateTimer() {
         if (totalSeconds <= 0) {
-            console.log("Tempo scaduto!");
-            timerDisplay.textContent = "00:00:00"; 
-            window.location.href = "provacompleta.html"; 
+            checkAnswers() 
+            loader.style.display = "flex";
+            totalPrima.style.filter = "blur(4px)";
+            totalSeconda.style.filter = "blur(4px)";
+            totalTerza.style.filter = "blur(4px)";
+            primaParte.style.display = "none";
+            secondaParte.style.display = "none";
+            terzaParte.style.display = "none";
+
+            setTimeout(() => {
+               window.location.href = "provacompleta.html";  
+            }, 3000);
+
+
             clearInterval(timerInterval);
-            return;
+            return;  
         }
 
         totalSeconds--;
@@ -267,7 +277,7 @@ function startTimer() {
 
         timerDisplay.textContent = "Tempo rimasto: " + `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
     
-        if (minutes < 15) {
+        if (minutes < 5) {
             timerDisplay.style.color = "red";
         }
     }
@@ -334,6 +344,7 @@ function terminaprova() {
     secondaParte.style.display = "none";
     terzaParte.style.display = "none";
     imgUp.style.visibility = "hidden";
+    
 
     checkAnswers()
 
